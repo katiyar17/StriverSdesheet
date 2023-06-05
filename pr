@@ -1,19 +1,1 @@
-class Solution {
-    public boolean checkStraightLine(int[][] coordinates) {
-        int x0 = coordinates[0][0];  // x-coordinate of first point
-        int y0 = coordinates[0][1];  // y-coordinate of first point
-        int x1 = coordinates[1][0];  // x-coordinate of second point
-        int y1 = coordinates[1][1];  // y-coordinate of second point
 
-        for (int i = 2; i < coordinates.length; i++) {
-            int xi = coordinates[i][0];  // x-coordinate of current point
-            int yi = coordinates[i][1];  // y-coordinate of current point
-
-            if ((y1 - y0) * (xi - x0) != (yi - y0) * (x1 - x0)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-}
